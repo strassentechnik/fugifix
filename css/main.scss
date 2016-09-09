@@ -1,0 +1,69 @@
+@import "~normalize.css";
+@import "~bourbon/app/assets/stylesheets/bourbon";
+
+// @import "~blaze/scss/blaze";
+// @import "settings";
+
+// @import "vendor/normalize";
+// @import "vendor/animate";
+// @import "vendor/hamburgers";
+
+@import "base/base";
+
+// @import "components/index";
+
+// @import "shame";
+
+html, body {
+  height: 100%;
+}
+
+// body {
+//   // background-color: $base-background-color;
+// }
+
+@include base-grid;
+@include base-typography;
+// @include base-buttons;
+// @include base-forms;
+// @include base-tables;
+
+// @include base-theme(water, $base-typography-water);
+// @include base-theme(stone, $base-typography-stone);
+
+
+// @include component-all;
+
+// @import "mountain_view";
+
+// @include shame-on-me;
+
+// @import "font-awesome";
+
+.grid {
+  @include outer-container;
+
+  .column:nth-child(1n) {
+    @include span-columns(1);
+  }
+
+  .column:nth-child(2n) {
+    @include span-columns(10);
+  }
+
+  .column:nth-child(3n) {
+    @include span-columns(1);
+  }
+}
+
+.hex {
+  cursor: pointer;
+  stroke: $red;
+  fill-opacity: 0;
+  fill: rgba($red, 1);
+  transition: all 0.2s ease-out;
+
+  &:hover, &:active {
+    fill-opacity: 1;
+  }
+}

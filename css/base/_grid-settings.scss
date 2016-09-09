@@ -1,0 +1,45 @@
+// @import "neat/neat-helpers";
+
+// $breakpoints: (
+//   small: 0,
+//   medium: em(640px),
+//   large: em(1024px),
+//   xlarge: em(1200px),
+//   xxlarge: em(1600px),
+// ) !default;
+
+$breakpoints: (
+  small: 0,
+  medium: 48em,
+  large: 64em,
+  xlarge: em(1200px),
+  xxlarge: em(1600px),
+) !default;
+
+$max-width: map-get($breakpoints, large);
+$grid-columns: 12;
+
+$column: $max-width / $grid-columns;
+// $gutter: em(0px);
+
+
+
+$medium-up: min-width map-get($breakpoints, medium);
+$large-up: min-width map-get($breakpoints, large);
+$xlarge-up: min-width map-get($breakpoints, xlarge);
+$xxlarge-up: min-width map-get($breakpoints, xxlarge);
+
+// @debug $column;
+// @debug $gutter;
+// @debug $grid-columns;
+// @debug $max-width;
+
+
+// $hias1: 6 * $column + (6 - 1) * $gutter;
+// $hias2: 12 * $column + (12 - 1) * $gutter;
+
+// @debug $hias1;
+// @debug $hias2;
+// @debug percentage($hias1 / $max-width);
+// @debug flex-grid(6, 12);
+// @debug modular-scale(1, 1em, $golden);

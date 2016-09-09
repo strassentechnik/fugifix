@@ -1,0 +1,89 @@
+@mixin base-buttons {
+  .btn {
+    appearance: none;
+    background-color: $action-color;
+    border: 0;
+    border-radius: $base-border-radius;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    line-height: 1;
+    padding: $small-spacing $base-spacing;
+    text-decoration: none;
+    transition: background-color $base-duration $base-timing;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      background-color: shade($action-color, 20%);
+      color: #fff;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+
+      &:hover {
+        background-color: $action-color;
+      }
+    }
+
+    &--ghost {
+      background-color: transparent;
+      border: 1px solid white;
+      transition: all .2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: white;
+        color: $action-color;
+      }
+    }
+  }
+
+  .btn--floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: $red;
+    border-radius: 50%;
+    color: white;
+    font-size: 2.5em;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: opacity .1s linear;
+    z-index: 9997;
+    box-shadow: 0 0 5px rgba(black, 0.5);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .btn__chat {
+    display: none;
+
+    .badge {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: $dark-gray;
+      border-radius: 50%;
+      position: absolute;
+      top: -13px;
+      right: -7px;
+      font-size: 16px;
+      padding-top: 2px;
+      text-align: center;
+    }
+  }
+}

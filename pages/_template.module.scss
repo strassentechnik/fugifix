@@ -1,0 +1,37 @@
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "../css/base/_variables.scss";
+
+.header {
+  text-align: center;
+  height: 200px;
+
+  &:before {
+    position: absolute;
+    top: -42px;
+    left: -101px;
+    content: " ";
+    display: block;
+    background-color: $red;
+    width: 150px;
+    height: 200px;
+    transform: rotate(25deg);
+  }
+
+  h1 {
+    display: none;
+  }
+}
+
+.nav {
+  position: absolute;
+  right: 10px;
+  top: 200px;
+
+  a {
+    display: block;
+  }
+}
+
+.logo {
+  width: 300px;
+}

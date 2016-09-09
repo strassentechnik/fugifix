@@ -1,0 +1,20 @@
+---
+general:
+  what: |
+    fugi-fix ist eine Produktfamilie mit harzgebundenen 1K und
+    2K Pflasterfugenmörteln mit unterschiedlichen Eigenschaften
+    und Verwendungszwecken.
+    Einsatz findet der Mörtel auf begangenen und befahrenen
+    Bereichen von leichter bis hoher Verkehrsbelastung.
+    Reinigung
+
+products:
+  belastbar:
+    title: belastbar
+    props:
+      - Für dünne Fugen hervorragend geeignet
+      - Sehr gute Fließfähigkeit und Verarbeitung
+      - Belastbar bis 7,5 t
+      - Dauerhafter Fugenschluss
+      - Ab 0°C verarbeitbar
+      - Dauerhaft wasserdurchlässig
