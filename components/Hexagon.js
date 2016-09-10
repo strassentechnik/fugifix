@@ -1,8 +1,13 @@
 import React from 'react'
+import styles from './Hexagon.module.scss'
+import classNames from 'classnames'
 
 const Hexagon = (props) => {
   const { width, strokeWidth } = props
-  const height = width * 0.8
+  const height = width * 0.83
+  const className = classNames(styles.hex, styles[`hex--${props.color}`], {
+    [styles[`hex--active`]]: props.active
+  })
 
   const hex = {
     width: width,
@@ -11,7 +16,7 @@ const Hexagon = (props) => {
     indent: strokeWidth
   }
 
-  let styles = {
+  let style = {
     strokeWidth: strokeWidth,
   }
 
@@ -28,18 +33,22 @@ const Hexagon = (props) => {
 
   return (
     <svg width={width} height={height}>
-      <polygon className="hex" style={styles} points={hexPoints}></polygon>
+      <polygon className={className} style={style} points={hexPoints}></polygon>
     </svg>
   )
 }
 
 Hexagon.propTypes = {
   width: React.PropTypes.number,
-  strokeWidth: React.PropTypes.number
+  strokeWidth: React.PropTypes.number,
+  color: React.PropTypes.string,
+  active: React.PropTypes.bool
 }
 Hexagon.defaultProps = {
   width: 50,
-  strokeWidth: 3
+  strokeWidth: 3,
+  color: 'red',
+  active: false
 }
 
 export default Hexagon

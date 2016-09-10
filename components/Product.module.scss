@@ -1,0 +1,110 @@
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "../css/base/_variables.scss";
+@import "../css/base/_grid-settings";
+@import "~bourbon-neat/app/assets/stylesheets/neat";
+
+@mixin product-color($color) {
+  border-bottom: 5px solid $color;
+  &:before { background-color: $color; }
+}
+
+.productWrapper {
+  position: relative;
+  // border-bottom: 5px solid $red;
+  padding-top: 200px;
+  padding-bottom: $base-spacing;
+
+  &:before {
+    position: absolute;
+    top: -42px;
+    left: -101px;
+    content: " ";
+    display: block;
+    // background-color: $red;
+    width: 150px;
+    height: 200px;
+    transform: rotate(25deg);
+  }
+
+  &.product {
+    &--red { @include product-color($red); }
+    &--green { @include product-color(green); }
+    &--yellow { @include product-color(yellow); }
+    &--pink { @include product-color(#932d88); }
+
+    &--original { @include product-color($color-original); }
+    &--schlaemmbar { @include product-color($color-schlaemmbar); }
+    &--belastbar { @include product-color($color-belastbar); }
+    &--farbig { @include product-color($color-farbig); }
+    &--schnellfest { @include product-color($color-schnellfest); }
+    &--hoch-belastbar { @include product-color($color-hoch-belastbar); }
+    &--steindesign { @include product-color($color-steindesign); }
+
+  }
+}
+
+.product {
+  @include outer-container;
+  min-height: 350px;
+  // margin-top: 200px;
+}
+
+.signets {
+  padding-top: 0px;
+  @include span-columns(2);
+
+  @include media($medium-up) {
+    padding-top: 38px + 24px + 50px;
+  }
+}
+
+.content {
+  position: relative;
+  padding-top: 0px;
+  @include span-columns(8);
+
+  @include media($medium-up) {
+    padding-top: 50px;
+    @include span-columns(10);
+  }
+
+  img {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+
+    @include media($medium-up) {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      width: 55%;
+      z-index: -1;
+    }
+
+    @include media($large-up) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 550px;
+      z-index: -1;
+    }
+  }
+}
+
+.image {
+  @include span-columns(6);
+}
+
+.signet {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.properties {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: $small-spacing;
+}

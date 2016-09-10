@@ -1,0 +1,31 @@
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "../css/base/_variables.scss";
+@import "../css/base/_grid-settings";
+@import "~bourbon-neat/app/assets/stylesheets/neat";
+
+@mixin hexagon-color($color) {
+  fill: rgba($color, 1);
+  stroke: $color;
+}
+
+.hex {
+  cursor: pointer;
+  stroke: $red;
+  fill-opacity: 0;
+  fill: rgba($red, 1);
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    fill-opacity: 0.8;
+  }
+
+  &--active { fill-opacity: 1; }
+
+  &--original { @include hexagon-color($color-original); }
+  &--schlaemmbar { @include hexagon-color($color-schlaemmbar); }
+  &--belastbar { @include hexagon-color($color-belastbar); }
+  &--farbig { @include hexagon-color($color-farbig); }
+  &--schnellfest { @include hexagon-color($color-schnellfest); }
+  &--hoch-belastbar { @include hexagon-color($color-hoch-belastbar); }
+  &--steindesign { @include hexagon-color($color-steindesign); }
+}

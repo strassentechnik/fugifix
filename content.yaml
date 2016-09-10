@@ -9,12 +9,167 @@ general:
     Reinigung
 
 products:
-  belastbar:
-    title: belastbar
-    props:
-      - Für dünne Fugen hervorragend geeignet
-      - Sehr gute Fließfähigkeit und Verarbeitung
-      - Belastbar bis 7,5 t
-      - Dauerhafter Fugenschluss
-      - Ab 0°C verarbeitbar
-      - Dauerhaft wasserdurchlässig
+  - title: fugi-fix "Original+"
+    color: original
+    image: '/images/produkte/ff_original.png'
+    content:
+      general: fugi-fix Original+ ist 1-komponentig, basiert auf einer Spezial-Emulsion und dient zur Verfestigung von Splitt, Sand, etc.
+      area:
+        - Verfugung von sämtlichen Pflaster- und Plattenbelägen
+        - Für Fußgängerbelastungen
+        - Ab 1 mm Fugenbreite
+      gain:
+        - Geeignet für ungebundene Bauweise
+        - Einfache Verarbeitung
+        - Kein Unkraut mehr in den Fugen
+        - Ab +7°C verarbeitbar
+        - Wasserdurchlässig
+      deliver:
+        - fugi-fix Original+
+        - 'Gebinde: 1 l Flasche'
+        - 'Karton: 12 Flaschen'
+        - 'Farbe: farblos'
+
+  - title: fugi-fix "schlämmbar"
+    color: schlaemmbar
+    image: '/images/produkte/ff_schlaemmbar.png'
+    content:
+      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
+      area:
+        - Verfugung von sämtlichen Pflasterbelägen im
+        - PKW- und LKW-Bereich bis 7,5 t Belastung
+        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
+      gain:
+        - Für schmale Fugen hervorragend geeignet
+        - Sehr gute Fließfähigkeit und Verarbeitung
+        - Belastbar bis 7,5 t
+        - Dauerhafter Fugenschluss
+        - Ab 0°C verarbeitbar
+        - Dauerhaft wasserdurchlässig
+      deliver:
+        - fugi-fix belastbar
+        - 'Komponente A: 27,5 kg Sand'
+        - 'Komponente B: 2,5 kg Harz'
+        - 30 kg Gebinde
+        - 'Palette: 24 Eimer'
+        - 'Farben: sand/hell, grau, anthrazit'
+
+  - title: fugi-fix "belastbar"
+    color: belastbar
+    image: '/images/produkte/ff_belastbar.png'
+    content:
+      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
+      area:
+        - Verfugung von sämtlichen Pflasterbelägen im
+        - PKW- und LKW-Bereich bis 7,5 t Belastung
+        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
+      gain:
+        - Für schmale Fugen hervorragend geeignet
+        - Sehr gute Fließfähigkeit und Verarbeitung
+        - Belastbar bis 7,5 t
+        - Dauerhafter Fugenschluss
+        - Ab 0°C verarbeitbar
+        - Dauerhaft wasserdurchlässig
+      deliver:
+        - fugi-fix belastbar
+        - 'Komponente A: 27,5 kg Sand'
+        - 'Komponente B: 2,5 kg Harz'
+        - 30 kg Gebinde
+        - 'Palette: 24 Eimer'
+        - 'Farben: sand/hell, grau, anthrazit'
+
+  - title: fugi-fix "farbig"
+    color: farbig
+    image: '/images/produkte/ff_farbig.png'
+    content:
+      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
+      area:
+        - Verfugung von sämtlichen Pflasterbelägen im
+        - PKW- und LKW-Bereich bis 7,5 t Belastung
+        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
+      gain:
+        - Für schmale Fugen hervorragend geeignet
+        - Sehr gute Fließfähigkeit und Verarbeitung
+        - Belastbar bis 7,5 t
+        - Dauerhafter Fugenschluss
+        - Ab 0°C verarbeitbar
+        - Dauerhaft wasserdurchlässig
+      deliver:
+        - fugi-fix belastbar
+        - 'Komponente A: 27,5 kg Sand'
+        - 'Komponente B: 2,5 kg Harz'
+        - 30 kg Gebinde
+        - 'Palette: 24 Eimer'
+        - 'Farben: sand/hell, grau, anthrazit'
+
+  - title: fugi-fix "schnellfest"
+    color: schnellfest
+    image: '/images/produkte/ff_schnellfest.png'
+    content:
+      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
+      area:
+        - Verfugung von sämtlichen Pflasterbelägen im
+        - PKW- und LKW-Bereich bis 7,5 t Belastung
+        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
+      gain:
+        - Für schmale Fugen hervorragend geeignet
+        - Sehr gute Fließfähigkeit und Verarbeitung
+        - Belastbar bis 7,5 t
+        - Dauerhafter Fugenschluss
+        - Ab 0°C verarbeitbar
+        - Dauerhaft wasserdurchlässig
+      deliver:
+        - fugi-fix belastbar
+        - 'Komponente A: 27,5 kg Sand'
+        - 'Komponente B: 2,5 kg Harz'
+        - 30 kg Gebinde
+        - 'Palette: 24 Eimer'
+        - 'Farben: sand/hell, grau, anthrazit'
+
+  - title: fugi-fix "hoch belastbar"
+    color: hoch-belastbar
+    image: '/images/produkte/ff_hochbelastbar.png'
+    content:
+      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
+      area:
+        - Verfugung von sämtlichen Pflasterbelägen im
+        - PKW- und LKW-Bereich bis 7,5 t Belastung
+        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
+      gain:
+        - Für schmale Fugen hervorragend geeignet
+        - Sehr gute Fließfähigkeit und Verarbeitung
+        - Belastbar bis 7,5 t
+        - Dauerhafter Fugenschluss
+        - Ab 0°C verarbeitbar
+        - Dauerhaft wasserdurchlässig
+      deliver:
+        - fugi-fix belastbar
+        - 'Komponente A: 27,5 kg Sand'
+        - 'Komponente B: 2,5 kg Harz'
+        - 30 kg Gebinde
+        - 'Palette: 24 Eimer'
+        - 'Farben: sand/hell, grau, anthrazit'
+
+  - title: fugi-fix "steindesign"
+    color: steindesign
+    image: '/images/produkte/ff_steindesign.png'
+    content:
+      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
+      area:
+        - Verfugung von sämtlichen Pflasterbelägen im
+        - PKW- und LKW-Bereich bis 7,5 t Belastung
+        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
+      gain:
+        - Für schmale Fugen hervorragend geeignet
+        - Sehr gute Fließfähigkeit und Verarbeitung
+        - Belastbar bis 7,5 t
+        - Dauerhafter Fugenschluss
+        - Ab 0°C verarbeitbar
+        - Dauerhaft wasserdurchlässig
+      deliver:
+        - fugi-fix belastbar
+        - 'Komponente A: 27,5 kg Sand'
+        - 'Komponente B: 2,5 kg Harz'
+        - 30 kg Gebinde
+        - 'Palette: 24 Eimer'
+        - 'Farben: sand/hell, grau, anthrazit'

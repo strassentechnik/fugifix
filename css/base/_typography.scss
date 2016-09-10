@@ -14,14 +14,14 @@
   #{$all-headings} {
     font-family: $heading-font-family;
     font-size: $base-heading-size;
-    font-weight: 400;
+    font-weight: 700;
     line-height: $heading-line-height;
     // text-transform: uppercase;
     margin: 0 0 $small-spacing;
   }
 
-  h5 {
-    font-size: 1rem;
+  h2 {
+    font-size: 1.25rem;
   }
 
   p {

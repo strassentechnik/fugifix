@@ -24,7 +24,7 @@ html, body {
 
 @include base-grid;
 @include base-typography;
-// @include base-buttons;
+@include base-buttons;
 // @include base-forms;
 // @include base-tables;
 
@@ -43,16 +43,13 @@ html, body {
 .grid {
   @include outer-container;
 
-  .column:nth-child(1n) {
-    @include span-columns(1);
+  .column:first-child {
+    @include shift(2);
+    @include span-columns(6);
   }
 
-  .column:nth-child(2n) {
-    @include span-columns(10);
-  }
-
-  .column:nth-child(3n) {
-    @include span-columns(1);
+  .column:last-child {
+    @include span-columns(2);
   }
 }
 
@@ -66,4 +63,14 @@ html, body {
   &:hover, &:active {
     fill-opacity: 1;
   }
+}
+
+.bg {
+  &--original { background-color: $color-original }
+  &--schlaemmbar { background-color: $color-schlaemmbar }
+  &--belastbar { background-color: $color-belastbar }
+  &--farbig { background-color: $color-farbig }
+  &--schnellfest { background-color: $color-schnellfest }
+  &--hoch-belastbar { background-color: $color-hoch-belastbar }
+  &--steindesign { background-color: $color-steindesign }
 }

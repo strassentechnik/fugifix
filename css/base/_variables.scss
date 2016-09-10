@@ -5,7 +5,7 @@ $base-font-family: 'Open Sans', $helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 0.8em;
 $base-heading-size: 1.25rem;
 
 // Line height
@@ -23,6 +23,14 @@ $base-z-index: 0;
 $blue: #53aee0;
 $orange: #f47a33;
 $red: #D41317;
+
+$color-original: rgb(204, 0, 255);
+$color-schlaemmbar: rgb(255, 0, 204);
+$color-belastbar: rgb(255, 0, 0);
+$color-farbig: rgb(90, 230, 0);
+$color-schnellfest: rgb(0, 102, 255);
+$color-hoch-belastbar: rgb(0, 0, 0);
+$color-steindesign: rgb(255, 153, 0);
 
 $dark-gray: #575757;
 $medium-gray: #B2B2B2;

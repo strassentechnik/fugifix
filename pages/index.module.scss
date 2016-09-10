@@ -1,0 +1,108 @@
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "../css/base/_variables.scss";
+@import "../css/base/_grid-settings";
+@import "~bourbon-neat/app/assets/stylesheets/neat";
+
+.product {
+  @include outer-container;
+  min-height: 350px;
+}
+
+.signets {
+  padding-top: 38px + 24px + 50px;
+  @include span-columns(2);
+}
+
+.content {
+  position: relative;
+  padding-top: 50px;
+  @include span-columns(10);
+
+  img {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 550px;
+    z-index: -1;
+  }
+}
+
+.image {
+  @include span-columns(6);
+}
+
+.signet {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.properties {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.productNav {
+  position: absolute;
+  right: 10px;
+  top: 200px;
+
+  a {
+    display: block;
+
+    span {
+      display: none;
+      position: absolute;
+      // width: 300px;
+      text-align: right;
+      right: 56px;
+      margin-top: 1px;
+      padding: 8px 14px;
+      color: white;
+      white-space: nowrap;
+      opacity: 0.8;
+    }
+
+    &:hover {
+      span {
+
+
+        @include media($medium-up) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  background-color: #575756;
+  color: white;
+  text-align: center;
+  padding: $small-spacing 0;
+  margin-bottom: $base-spacing;
+
+  a {
+    display: inline-block;
+    color: white;
+
+    &:after {
+      content: "|";
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    &:last-child {
+      &:after {
+        content: initial;
+      }
+    }
+  }
+}
+
+.fugen {
+  // width: 150px;
+  display: block;
+  margin: 0 auto;
+  // float: right;
+}
