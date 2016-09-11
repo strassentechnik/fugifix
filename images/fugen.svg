@@ -47,10 +47,11 @@
 	.st41{opacity:0.5;}
 	.st42{opacity:0.5;fill-rule:evenodd;clip-rule:evenodd;fill:#595A5C;}
 	.st43{fill:#DB2329;}
+	.st44{opacity:0.5;fill:none;stroke:#595A5C;stroke-width:0.5;stroke-miterlimit:10;}
 </style>
 <g>
-	<polygon class="st30" points="52.4,9.4 60.7,32.2 45.1,50.8 21.2,46.6 12.9,23.8 28.5,5.2 	"/>
-	<polygon class="st30" points="44.6,53.4 52.9,76.2 37.3,94.8 13.5,90.6 5.2,67.8 20.8,49.2 	"/>
-	<polygon class="st30" points="86.5,38.1 94.8,60.9 79.2,79.5 55.4,75.3 47.1,52.5 62.7,33.9 	"/>
+	<polygon class="st20" points="52.4,9.4 60.7,32.2 45.1,50.8 21.2,46.6 12.9,23.8 28.5,5.2 	"/>
+	<polygon class="st20" points="44.6,53.4 52.9,76.2 37.3,94.8 13.5,90.6 5.2,67.8 20.8,49.2 	"/>
+	<polygon class="st20" points="86.5,38.1 94.8,60.9 79.2,79.5 55.4,75.3 47.1,52.5 62.7,33.9 	"/>
 </g>
 </svg>
