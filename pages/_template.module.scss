@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
 
   // &:before {
   //   position: absolute;
@@ -26,6 +27,13 @@
   h1 {
     display: none;
   }
+
+  .facebook {
+    position: absolute;
+    width: 50px;
+    right: 10px;
+    top: 10px;
+  }
 }
 
 .logo {
@@ -35,5 +43,30 @@
   @include media($medium-up) {
     margin-top: 20px;
     width: 300px;
+  }
+}
+
+.footer {
+  background-color: #575756;
+  color: white;
+  text-align: center;
+  padding: $small-spacing 0;
+  // margin-top: $base-spacing;
+
+  a {
+    display: inline-block;
+    color: white;
+
+    &:after {
+      content: "|";
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    &:last-child {
+      &:after {
+        content: initial;
+      }
+    }
   }
 }

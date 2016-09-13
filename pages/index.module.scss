@@ -9,7 +9,7 @@
 }
 
 .signets {
-  padding-top: 38px + 24px + 50px;
+  padding-top: 38px + 50px;
   @include span-columns(2);
 }
 
@@ -24,6 +24,89 @@
     right: 0;
     width: 550px;
     z-index: -1;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: $base-spacing * 2;
+  margin-bottom: $base-spacing;
+
+  @include media($medium-up) {
+    font-size: 2rem;
+    margin-top: $base-spacing * 2;
+    margin-bottom: $base-spacing;
+  }
+}
+
+.what {
+  background-color: #e6e6e6;
+  padding: ($base-spacing * 4) 0 ($base-spacing) 0;
+}
+
+.grid {
+  @include outer-container;
+
+
+  @include media($medium-up) {
+    margin-bottom: $base-spacing;
+  }
+
+  .text, .image {
+    @include media($medium-up) {
+      height: 413px;
+    }
+  }
+
+  .text {
+    position: relative;
+    @include span-columns(12);
+
+    @include media($medium-up) {
+      @include span-columns(5);
+      // @include shift(1);
+
+      &:first-child { @include shift(1); }
+    }
+
+    .inner {
+      padding: 0 $base-spacing;
+
+      @include media($medium-up) {
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        margin-top: -110px;
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+
+
+  }
+
+  .image {
+    @include span-columns(12);
+
+    @include media($medium-up) {
+      @include span-columns(5);
+      // @include shift(1);
+
+      &:first-child { @include shift(1); }
+    }
+
+    img {
+      display: none;
+      width: 413px;
+
+      @include media($medium-up) {
+        display: block;
+      }
+    }
+
+
   }
 }
 
@@ -79,25 +162,48 @@
   background-color: #575756;
   color: white;
   text-align: center;
-  padding: $small-spacing 0;
-  margin-bottom: $base-spacing;
+  // margin-bottom: $base-spacing;
+
+  @include media($medium-up) {
+    padding: $small-spacing 0;
+  }
 
   a {
-    display: inline-block;
     color: white;
+    display: block;
+    padding: $small-spacing 0;
 
-    &:after {
-      content: "|";
-      display: inline-block;
-      margin: 0 10px;
+    &:hover {
+      background-color: lighten(#575756, 10);
     }
 
-    &:last-child {
+    @include media($medium-up) {
+      padding: 0;
+      display: inline-block;
+
+      &:hover {
+        background-color: inherit;
+      }
+
       &:after {
-        content: initial;
+        content: "|";
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      &:last-child {
+        &:after {
+          content: initial;
+        }
       }
     }
   }
+}
+
+.images {
+  @include outer-container;
+  @include shift(2);
+  @include span-columns(8);
 }
 
 .fugen {
@@ -105,4 +211,64 @@
   display: block;
   margin: 0 auto;
   // float: right;
+}
+
+.section {
+  display: block;
+  padding-bottom: $base-spacing * 4;
+
+  &--alt {
+    background-color: #e6e6e6;
+  }
+
+  &__contact {
+    // padding-bottom: $base-spacing;
+  }
+
+  .tool-grid {
+    @include outer-container;
+    margin-bottom: 0;
+    text-align: center;
+
+    .tool {
+      @include span-columns(5);
+
+      &:nth-child(1) {
+        @include shift(1);
+      }
+
+      &:nth-child(3) {
+        @include shift(1);
+      }
+
+      @include media($medium-up) {
+        @include span-columns(2.5);
+
+        &:nth-child(3) {
+          margin-left: 0;
+        }
+      }
+
+      img {
+        margin-bottom: $small-spacing;
+      }
+
+      span {
+        display: block;
+        font-weight: bold;
+
+        &:nth-child(3) {
+          margin-bottom: $base-spacing;
+          font-weight: 300;
+          font-style: italic;
+        }
+      }
+
+    }
+  }
+
+  .subtitle {
+    padding-top: $base-spacing * 2;
+    margin-top: 0;
+  }
 }

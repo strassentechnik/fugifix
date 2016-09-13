@@ -1,0 +1,122 @@
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "../css/base/_variables.scss";
+@import "../css/base/_grid-settings";
+@import "~bourbon-neat/app/assets/stylesheets/neat";
+
+.finder {
+  @include outer-container;
+  margin-bottom: $base-spacing * 2;
+
+  h2 {
+    text-align: center;
+  }
+
+  &__select, &__products, &__result {
+    @include shift(1);
+    @include span-columns(10);
+  }
+
+  &__select {
+    position: relative;
+
+    .form {
+      @include row;
+    }
+
+    input {
+      @include span-columns(12);
+      text-align: center;
+
+
+      @include media($medium-up) {
+        @include span-columns(6);
+      }
+    }
+
+    &__column {
+      @include span-columns(12);
+
+      @include media($medium-up) {
+        @include span-columns(5);
+      }
+    }
+  }
+
+  &__products {
+    &__column {
+      @include span-columns(12);
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid transparent;
+      padding: $base-spacing;
+      margin-bottom: $base-spacing * 2;
+      transition: border .2s ease-in-out;
+
+      &:hover, &--active {
+        border: 2px solid red;
+      }
+
+      @include media($medium-up) {
+        @include span-columns(4);
+      }
+    }
+  }
+
+  &__result {
+    margin-top: $base-spacing * 2;
+    text-align: center;
+    background-color: $red;
+    color: white;
+    padding: $base-spacing 0;
+  }
+}
+
+.scale {
+  display: block;
+  height: 25px;
+
+  @include media($medium-up) {
+    height: 50px;
+  }
+
+  .weight {
+    position: absolute;
+    width: 100px;
+    float: left;
+    // background-color: green;
+
+    img {
+      width: 50px;
+      margin-left: -25px;
+
+      @include media($medium-up) {
+        width: 100px;
+        margin-left: -50px;
+      }
+    }
+
+    &:first-child {
+      left: 1.5%;
+    }
+
+    &:nth-child(2) {
+      left: 34%;
+    }
+
+    &:nth-child(3) {
+      left: 66.2%;
+    }
+
+    &:last-child {
+      left: 98.5%;
+    }
+  }
+}
+
+.result {
+  font-size: 2rem;
+}
+
+.small {
+  font-size: 0.8rem;
+}

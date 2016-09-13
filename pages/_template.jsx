@@ -4,6 +4,7 @@ import { prefixLink } from 'gatsby-helpers'
 import '../css/main'
 import '../css/markdown-styles'
 import styles from './_template.module.scss'
+import MediaQuery from 'react-responsive'
 
 module.exports = React.createClass({
   propTypes () {
@@ -12,14 +13,26 @@ module.exports = React.createClass({
     }
   },
   render () {
-    console.log(styles)
     return (
       <div>
         <header className={styles.header}>
           <h1>Fugi-Fix - Pflasterfugenmörtel</h1>
-          <img src={prefixLink('/logo.svg')} className={styles.logo}/>
+          <Link to={prefixLink('/')}><img src={prefixLink('/logo.svg')} className={styles.logo}/></Link>
+          <a href="https://www.facebook.com/fugifix" target="_blank" className={styles.facebook}>
+            <MediaQuery query='(min-width: 48em)'>
+              <img src={prefixLink('/images/facebook.svg')} />
+            </MediaQuery>
+            <MediaQuery query='(max-width: 767px)'>
+              <img src={prefixLink('/images/facebook.svg')} />
+            </MediaQuery>
+          </a>
         </header>
         {this.props.children}
+        <footer className={styles.footer}>
+          <Link to={prefixLink('/')}>&copy; fugi-fix.de</Link>
+          <Link to={prefixLink('/impressum/')}>Impressum</Link>
+          <Link to={prefixLink('/agbs/')}>AGBs</Link>
+        </footer>
       </div>
     )
   },

@@ -12,7 +12,7 @@
   position: relative;
   // border-bottom: 5px solid $red;
   padding-top: 200px;
-  padding-bottom: $base-spacing;
+  padding-bottom: $base-spacing * 2;
 
   &:before {
     position: absolute;
@@ -54,18 +54,27 @@
   @include span-columns(2);
 
   @include media($medium-up) {
-    padding-top: 38px + 24px + 50px;
+    padding-top: 38px + 50px;
   }
 }
 
 .content {
   position: relative;
   padding-top: 0px;
+  min-height: 333px;
   @include span-columns(8);
 
   @include media($medium-up) {
     padding-top: 50px;
     @include span-columns(10);
+  }
+
+  h1 {
+    text-align: center;
+
+    @include media($medium-up) {
+      text-align: left;
+    }
   }
 
   img {
@@ -91,6 +100,27 @@
       z-index: -1;
     }
   }
+
+  .actions {
+
+    button, a {
+      width: 100%;
+      margin-right: $small-spacing;
+      margin-bottom: $small-spacing;
+      text-align: center;
+    }
+
+    @include media($medium-up) {
+      position: absolute;
+      bottom: 0;
+
+      button, a {
+        width: inherit;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .image {
@@ -105,6 +135,6 @@
 
 .properties {
   list-style-type: disc;
-  list-style-position: inside;
+  list-style-position: outside;
   margin-bottom: $small-spacing;
 }

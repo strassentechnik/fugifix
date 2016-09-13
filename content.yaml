@@ -1,68 +1,88 @@
 ---
 general:
   what: |
-    fugi-fix ist eine Produktfamilie mit harzgebundenen 1K und
-    2K Pflasterfugenmörteln mit unterschiedlichen Eigenschaften
-    und Verwendungszwecken.
-    Einsatz findet der Mörtel auf begangenen und befahrenen
-    Bereichen von leichter bis hoher Verkehrsbelastung.
-    Reinigung
+    fugi-fix wurde 2007 von der Nadler Straßentechnik GmbH, einem führenden Anbieter für Straßen- und
+    Tiefbauprodukte ins Leben gerufen. Die hochwertigen Qualitäts-Pflasterfugenmörtel    seit dem
+    immer mehr Verarbeiter und Händler.
+  detail: |
+    Einsatz findet fugi-fix Pflasterfugenmörtel bei begangenen und befahrenen Bereichen von leichter bis sehr
+    hoher Belastung (40 t). Durch die besonderen Produkteigenschaften ist fugi-fix auch für anspruchsvolle
+    Gewerke das perfekte Material. Der Pflasterfugenmörtel fugi-fix belastbar kann z.B. bereits ab 3 mm
+    Fugenbreite verwendet werden und hält Belastungen bis 7,5 t stand.
+  gain:
+    - Kein Unkraut mehr in den Fugen
+    - Keine Mörtelschleier auf dem Pflaster
+    - Fuge mit Hochdruckreiniger abwaschbar
+    - Wasserdurchlässig
+    - Ab 3 mm Fugenbreite
+    - Bis 40 t Belastung
 
 products:
-  - title: fugi-fix "Original+"
+  - id: 0
+    title: fugi-fix "Original+"
     color: original
     image: '/images/produkte/ff_original.png'
+    pdf: '/kataloge/ff_original.pdf'
+    density: 1.35
+    eigenschaften:
+      - feucht
+      - unkraut
+    width:
+      min: 1
+      max: 50
+    depth:
+      min: 30
+      max: 120
     content:
-      general: fugi-fix Original+ ist 1-komponentig, basiert auf einer Spezial-Emulsion und dient zur Verfestigung von Splitt, Sand, etc.
-      area:
-        - Verfugung von sämtlichen Pflaster- und Plattenbelägen
-        - Für Fußgängerbelastungen
-        - Ab 1 mm Fugenbreite
       gain:
         - Geeignet für ungebundene Bauweise
         - Einfache Verarbeitung
         - Kein Unkraut mehr in den Fugen
         - Ab +7°C verarbeitbar
         - Wasserdurchlässig
-      deliver:
-        - fugi-fix Original+
-        - 'Gebinde: 1 l Flasche'
-        - 'Karton: 12 Flaschen'
-        - 'Farbe: farblos'
 
-  - title: fugi-fix "schlämmbar"
+  - id: 1
+    title: fugi-fix "schlämmbar"
     color: schlaemmbar
     image: '/images/produkte/ff_schlaemmbar.png'
+    pdf: '/kataloge/ff_schlaemmbar.pdf'
+    density: 1.46
+    eigenschaften:
+      - feucht
+      - frost
+      - unkraut
+    width:
+      min: 1
+      max: 50
+    depth:
+      min: 30
+      max: 120
     content:
-      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
-      area:
-        - Verfugung von sämtlichen Pflasterbelägen im
-        - PKW- und LKW-Bereich bis 7,5 t Belastung
-        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
       gain:
         - Für schmale Fugen hervorragend geeignet
-        - Sehr gute Fließfähigkeit und Verarbeitung
-        - Belastbar bis 7,5 t
+        - Verarbeitungsfertig, 1-komponentig
+        - Material kann eingeschlämmt werden
         - Dauerhafter Fugenschluss
-        - Ab 0°C verarbeitbar
+        - Verhindert Unkrautbewuchs
         - Dauerhaft wasserdurchlässig
-      deliver:
-        - fugi-fix belastbar
-        - 'Komponente A: 27,5 kg Sand'
-        - 'Komponente B: 2,5 kg Harz'
-        - 30 kg Gebinde
-        - 'Palette: 24 Eimer'
-        - 'Farben: sand/hell, grau, anthrazit'
 
-  - title: fugi-fix "belastbar"
+  - id: 2
+    title: fugi-fix "belastbar"
     color: belastbar
     image: '/images/produkte/ff_belastbar.png'
+    pdf: '/kataloge/ff_belastbar.pdf'
+    density: 1.47
+    eigenschaften:
+      - feucht
+      - frost
+      - unkraut
+    width:
+      min: 1
+      max: 50
+    depth:
+      min: 30
+      max: 120
     content:
-      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
-      area:
-        - Verfugung von sämtlichen Pflasterbelägen im
-        - PKW- und LKW-Bereich bis 7,5 t Belastung
-        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
       gain:
         - Für schmale Fugen hervorragend geeignet
         - Sehr gute Fließfähigkeit und Verarbeitung
@@ -70,106 +90,102 @@ products:
         - Dauerhafter Fugenschluss
         - Ab 0°C verarbeitbar
         - Dauerhaft wasserdurchlässig
-      deliver:
-        - fugi-fix belastbar
-        - 'Komponente A: 27,5 kg Sand'
-        - 'Komponente B: 2,5 kg Harz'
-        - 30 kg Gebinde
-        - 'Palette: 24 Eimer'
-        - 'Farben: sand/hell, grau, anthrazit'
 
-  - title: fugi-fix "farbig"
+  - id: 3
+    title: fugi-fix "farbig"
     color: farbig
     image: '/images/produkte/ff_farbig.png'
+    pdf: '/kataloge/ff_farbig.pdf'
+    density: 1.47
+    eigenschaften:
+      - feucht
+      - frost
+      - unkraut
+    width:
+      min: 1
+      max: 50
+    depth:
+      min: 30
+      max: 120
     content:
-      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
-      area:
-        - Verfugung von sämtlichen Pflasterbelägen im
-        - PKW- und LKW-Bereich bis 7,5 t Belastung
-        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
       gain:
         - Für schmale Fugen hervorragend geeignet
-        - Sehr gute Fließfähigkeit und Verarbeitung
+        - Sehr gute Fließfähigkeit
         - Belastbar bis 7,5 t
         - Dauerhafter Fugenschluss
         - Ab 0°C verarbeitbar
         - Dauerhaft wasserdurchlässig
-      deliver:
-        - fugi-fix belastbar
-        - 'Komponente A: 27,5 kg Sand'
-        - 'Komponente B: 2,5 kg Harz'
-        - 30 kg Gebinde
-        - 'Palette: 24 Eimer'
-        - 'Farben: sand/hell, grau, anthrazit'
 
-  - title: fugi-fix "schnellfest"
+  - id: 4
+    title: fugi-fix "schnellfest"
     color: schnellfest
     image: '/images/produkte/ff_schnellfest.png'
+    pdf: '/kataloge/ff_schnellfest.pdf'
+    density: 1.67
+    eigenschaften:
+      - feucht
+      - frost
+      - unkraut
+    width:
+      min: 1
+      max: 50
+    depth:
+      min: 30
+      max: 120
     content:
-      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
-      area:
-        - Verfugung von sämtlichen Pflasterbelägen im
-        - PKW- und LKW-Bereich bis 7,5 t Belastung
-        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
       gain:
-        - Für schmale Fugen hervorragend geeignet
-        - Sehr gute Fließfähigkeit und Verarbeitung
-        - Belastbar bis 7,5 t
+        - Nach 24 Stunden mit 25 t belastbar
+        - Bei leichtem Regen verarbeitbar
+        - Gute Fließfähigkeit
+        - Belastbar bis 25 t
         - Dauerhafter Fugenschluss
         - Ab 0°C verarbeitbar
         - Dauerhaft wasserdurchlässig
-      deliver:
-        - fugi-fix belastbar
-        - 'Komponente A: 27,5 kg Sand'
-        - 'Komponente B: 2,5 kg Harz'
-        - 30 kg Gebinde
-        - 'Palette: 24 Eimer'
-        - 'Farben: sand/hell, grau, anthrazit'
 
-  - title: fugi-fix "hoch belastbar"
+  - id: 5
+    title: fugi-fix "hoch belastbar"
     color: hoch-belastbar
     image: '/images/produkte/ff_hochbelastbar.png'
+    pdf: '/kataloge/ff_hochbelastbar.pdf'
+    density: 1.74
+    eigenschaften:
+      - feucht
+      - frost
+      - unkraut
+    width:
+      min: 1
+      max: 50
+    depth:
+      min: 40
+      max: 120
     content:
-      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
-      area:
-        - Verfugung von sämtlichen Pflasterbelägen im
-        - PKW- und LKW-Bereich bis 7,5 t Belastung
-        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
       gain:
-        - Für schmale Fugen hervorragend geeignet
-        - Sehr gute Fließfähigkeit und Verarbeitung
-        - Belastbar bis 7,5 t
+        - Für höchste Verkehrsbelastungen bis 40 t
+        - Einfache Verarbeitung
         - Dauerhafter Fugenschluss
         - Ab 0°C verarbeitbar
-        - Dauerhaft wasserdurchlässig
-      deliver:
-        - fugi-fix belastbar
-        - 'Komponente A: 27,5 kg Sand'
-        - 'Komponente B: 2,5 kg Harz'
-        - 30 kg Gebinde
-        - 'Palette: 24 Eimer'
-        - 'Farben: sand/hell, grau, anthrazit'
+        - Sehr gering wasserdurchlässig
 
-  - title: fugi-fix "steindesign"
+  - id: 6
+    title: fugi-fix "steindesign"
     color: steindesign
     image: '/images/produkte/ff_steindesign.png'
+    pdf: '/kataloge/ff_steindesign.pdf'
+    density: 1.46
+    eigenschaften:
+      - feucht
+      - unkraut
+    width:
+      min: 1
+      max: 50
+    depth:
+      min: 10
+      max: 120
     content:
-      general: fugi-fix belastbar ist 2-komponentig und basiert auf Epoxidharz und Quarzsand.
-      area:
-        - Verfugung von sämtlichen Pflasterbelägen im
-        - PKW- und LKW-Bereich bis 7,5 t Belastung
-        - Ab 3 mm Fugenbreite und 30 mm Fugentiefe
       gain:
-        - Für schmale Fugen hervorragend geeignet
-        - Sehr gute Fließfähigkeit und Verarbeitung
-        - Belastbar bis 7,5 t
+        - Für Flächen ab 30 mm Tiefe
+        - Nach 24 Stunden begehbar
+        - Farbecht
+        - UV- und wasserbeständig
         - Dauerhafter Fugenschluss
-        - Ab 0°C verarbeitbar
-        - Dauerhaft wasserdurchlässig
-      deliver:
-        - fugi-fix belastbar
-        - 'Komponente A: 27,5 kg Sand'
-        - 'Komponente B: 2,5 kg Harz'
-        - 30 kg Gebinde
-        - 'Palette: 24 Eimer'
-        - 'Farben: sand/hell, grau, anthrazit'
+        - Stark wasserdurchlässig

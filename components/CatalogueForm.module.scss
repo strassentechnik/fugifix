@@ -1,0 +1,23 @@
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "../css/base/_variables.scss";
+@import "../css/base/_grid-settings";
+@import "~bourbon-neat/app/assets/stylesheets/neat";
+
+.form {
+  // margin-bottom: $base-spacing * 4;
+
+  input {
+    background-color: white;
+  }
+
+  input[type='submit'] {
+    font-size: 1rem;
+    width: 100%;
+    background-color: #575756;
+    color: white;
+
+    &:hover {
+      background-color: lighten(#575756, 10);
+    }
+  }
+}

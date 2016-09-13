@@ -28,22 +28,31 @@
   select {
     display: block;
     font-family: $base-font-family;
-    font-size: $base-font-size;
+    font-size: 1rem;
+
+    @include media($medium-up) {
+      font-size: 1.25rem;
+    }
   }
 
   #{$all-text-inputs},
   select[multiple] {
-    background-color: $base-background-color;
-    border: $base-border;
+    background-color: #e6e6e6;
+    border: 0px;
     border-radius: $form-border-radius;
-    box-shadow: $form-box-shadow;
+    // box-shadow: $form-box-shadow;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     font-family: $base-font-family;
-    font-size: $base-font-size;
+    font-size: 1rem;
     margin-bottom: $small-spacing;
     padding: $base-spacing / 3;
     transition: border-color $base-duration $base-timing;
     width: 100%;
+
+    @include media($medium-up) {
+      font-size: 1.25rem;
+    }
 
     &:hover {
       border-color: shade($base-border-color, 20%);
