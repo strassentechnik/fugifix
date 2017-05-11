@@ -138,7 +138,7 @@ export default class Index extends React.Component {
 
             <div className="row">
               <div className="small-8 small-shift-2">
-                <CatalogueForm />
+                <CatalogueForm product={this.state.prodForCalc} />
               </div>
             </div>
           </div>

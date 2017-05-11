@@ -11,7 +11,7 @@
     text-align: center;
   }
 
-  &__select, &__products, &__result {
+  &__select, &__products, &__result, &__actions {
     @include shift(1);
     @include span-columns(10);
   }
@@ -68,6 +68,16 @@
     background-color: $red;
     color: white;
     padding: $base-spacing 0;
+  }
+
+  &__actions {
+    margin-top: $base-spacing;
+
+    @include media($medium-up) {
+      a {
+        font-size: 1rem;
+      }
+    }
   }
 }
 

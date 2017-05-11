@@ -4,6 +4,7 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import styles from './CatalogueForm.module.scss'
 import classNames from 'classnames'
+import content from '../content.yaml'
 
 export default class CatalogueForm extends React.Component {
 
@@ -15,6 +16,7 @@ export default class CatalogueForm extends React.Component {
   }
 
   render () {
+    console.log(this.props)
     return (
       <form action="//mailthis.to/fugifix" method="post" className={styles.form}>
         <div className="row">

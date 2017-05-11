@@ -238,10 +238,29 @@ export default class ProductFinder extends React.Component {
 
   renderResult() {
     if (this.getResult() === 0) return
+
+    const product = content.products[this.state.product]
+    const result = numeral(this.getResult()).format('0,0.0')
+    const mailto = `mailto:info@fugi-fix.de?subject=Angebot für ${product.title}&body=Bitte schicken Sie mir ein Angebot über ${result} kg/m² für das Produkt ${product.title}. Vielen Dank!`
+
     return (
-      <div className={styles.finder__result}>
-        <div className={styles.result}>{numeral(this.getResult()).format('0,0.0')} kg/m&sup2;</div>
-        <p>Bedarfsmenge für 1 m&sup2; {content.products[this.state.product].title}</p>
+      <div>
+        <div className={styles.finder__result}>
+          <div className={styles.result}>{result} kg/m&sup2;</div>
+          <p>Bedarfsmenge für 1 m&sup2; {product.title}</p>
+          <small>Bei den angegebenen Werten handelt es sich um Erfahrungswerte, diese sind jedoch unverbindlich und begründen kein vertragliches Rechtsverhältnis.</small>
+        </div>
+
+        <div className={styles.finder__actions}>
+          <div className="row">
+            <div className="medium-6">
+              <a className="btn btn--block" href={mailto} target="_blank">Jetzt Angebot anfordern</a>
+            </div>
+            <div className="medium-6">
+              <a className="btn btn--block" href={prefixLink(product.pdf)} target="_blank">Mehr Infos zum Produkt</a>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
