@@ -322,7 +322,7 @@ export default class ProductFinder extends React.Component {
 
         {(this.state.depth < 30) ?
           <div className={styles.warning}>
-            Achtung: Eine Fugentiefe unter 30mm ist nur bei keramischen Platten in Verbindung mit
+            Achtung: Eine Fugentiefe unter 30 mm ist nur bei keramischen Platten in Verbindung mit
             speziellem Untergrundaufbau möglich.
           </div>
           : null
