@@ -130,3 +130,10 @@
 .small {
   font-size: 0.8rem;
 }
+
+.warning {
+  margin-bottom: $base-spacing;
+  padding: $small-spacing $base-spacing;
+  background-color: #f59f00;
+  color: #fff;
+}

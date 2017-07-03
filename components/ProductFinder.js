@@ -55,7 +55,7 @@ export default class ProductFinder extends React.Component {
         weight: 0.3,
         min: 1,
         max: 50,
-        products: [0]
+        products: [0],
       },
       2: {
         weight: 7.5,
@@ -86,13 +86,29 @@ export default class ProductFinder extends React.Component {
       this.state.product = productId
       this.state.weight = productWeights[productId]
 
-      if (productId === 0) {
-        this.cat[1].products = [0]
-        this.state.width = 1
-      } else {
-        this.cat[1].products = [0,1,2]
-        this.state.width = this.cat[this.state.weight].min > 3 ? this.cat[this.state.weight].min : 3
-        this.state.depth = content.products[productId].depth.min
+      switch (productId) {
+        case 0:
+          this.cat[1].products = [0]
+          this.state.width = 1
+          break
+
+        case 1:
+          this.cat[1].products = [0,1,2]
+          this.state.width = this.cat[this.state.weight].min > 3 ? this.cat[this.state.weight].min : 3
+          this.state.depth = 30
+          break
+
+        case 2:
+          this.cat[1].products = [0,1,2]
+          this.state.width = this.cat[this.state.weight].min > 3 ? this.cat[this.state.weight].min : 3
+          this.state.depth = 30
+          break
+
+        default:
+          this.cat[1].products = [0,1,2]
+          this.state.width = this.cat[this.state.weight].min > 3 ? this.cat[this.state.weight].min : 3
+          this.state.depth = content.products[productId].depth.min
+          break
       }
     }
   }
@@ -125,7 +141,26 @@ export default class ProductFinder extends React.Component {
   }
 
   handleProductSelect = (product) => {
-    const depth = product === 5 ? this.product(product).depth.min : 30
+    let depth
+
+    switch (product) {
+      case 1:
+        depth = 30
+        break
+
+      case 2:
+        depth = 30
+        break
+
+      case 5:
+        depth = this.product(product).depth.min
+        break
+
+      default:
+        depth = 30
+        break
+    }
+
     this.setState({
       product: product,
       depth: (this.state.depth < depth ? depth : this.state.depth)
@@ -268,17 +303,31 @@ export default class ProductFinder extends React.Component {
   renderSecondPart() {
     if (this.state.product === null) return
 
+    const { depth } = this.product(this.state.product)
+
+    console.log(depth, this.state.depth)
+
+    // debugger
     return (
       <div className={styles.finder__select}>
         <h2>Fugentiefe</h2>
         <RangeSlider
-          min={this.product(this.state.product).depth.min}
-          max={this.product(this.state.product).depth.max}
+          min={depth.min}
+          max={depth.max}
           step={1}
           value={this.state.depth}
           valueDisplay={<span>{this.state.depth} <span className={styles.small}>mm</span></span>}
           orientation="horizontal"
           onChange={this.handleDepthChange} />
+
+        {(this.state.depth < 30) ?
+          <div className={styles.warning}>
+            Achtung: Eine Fugentiefe unter 30mm ist nur bei keramischen Platten in Verbindung mit
+            speziellem Untergrundaufbau möglich.
+          </div>
+          : null
+        }
+
 
         <h2>Pflasterstein Größe (Länge x Breite in cm)</h2>
         <div className={styles.form}>
