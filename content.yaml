@@ -21,7 +21,7 @@ products:
   - id: 0
     title: fugi-fix "Original+"
     color: original
-    image: '/images/produkte/ff_original.png'
+    image: '/images/produkte/ff_original.jpg'
     pdf: '/kataloge/ff_original.pdf'
     density: 1.35
     eigenschaften:
@@ -44,7 +44,7 @@ products:
   - id: 1
     title: fugi-fix "schlämmbar"
     color: schlaemmbar
-    image: '/images/produkte/ff_schlaemmbar.png'
+    image: '/images/produkte/ff_schlaemmbar.jpg'
     pdf: '/kataloge/ff_schlaemmbar.pdf'
     density: 1.46
     eigenschaften:
@@ -69,7 +69,7 @@ products:
   - id: 2
     title: fugi-fix "belastbar"
     color: belastbar
-    image: '/images/produkte/ff_belastbar.png'
+    image: '/images/produkte/ff_belastbar.jpg'
     pdf: '/kataloge/ff_belastbar.pdf'
     density: 1.47
     eigenschaften:
@@ -94,7 +94,7 @@ products:
   - id: 3
     title: fugi-fix "farbig"
     color: farbig
-    image: '/images/produkte/ff_farbig.png'
+    image: '/images/produkte/ff_farbig.jpg'
     pdf: '/kataloge/ff_farbig.pdf'
     density: 1.47
     eigenschaften:
@@ -119,7 +119,7 @@ products:
   - id: 4
     title: fugi-fix "schnellfest"
     color: schnellfest
-    image: '/images/produkte/ff_schnellfest.png'
+    image: '/images/produkte/ff_schnellfest.jpg'
     pdf: '/kataloge/ff_schnellfest.pdf'
     density: 1.67
     eigenschaften:
@@ -145,7 +145,7 @@ products:
   - id: 5
     title: fugi-fix "hoch belastbar"
     color: hoch-belastbar
-    image: '/images/produkte/ff_hochbelastbar.png'
+    image: '/images/produkte/ff_hochbelastbar.jpg'
     pdf: '/kataloge/ff_hochbelastbar.pdf'
     density: 1.74
     eigenschaften:
@@ -169,7 +169,7 @@ products:
   - id: 6
     title: fugi-fix "steindesign"
     color: steindesign
-    image: '/images/produkte/ff_steindesign.png'
+    image: '/images/produkte/ff_steindesign.jpg'
     pdf: '/kataloge/ff_steindesign.pdf'
     density: 1.46
     eigenschaften:
