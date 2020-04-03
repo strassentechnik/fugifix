@@ -40,40 +40,51 @@ export default class ProductFinder extends React.Component {
       product: null,
       plaster: {
         width: 0,
-        height: 0
-      }
+        height: 0,
+      },
     }
 
-    this.cat = {
+    this.category = {
+      // Human
       1: {
         weight: 0.3,
         min: 1,
         max: 50,
         products: [0],
       },
+      // Car
       2: {
         weight: 7.5,
         min: 3,
         max: 50,
-        products: [2,3]
+        products: [2, 3],
       },
+      // Truck
       3: {
         weight: 25,
         min: 5,
         max: 50,
-        products: [4]
+        products: [4, 5],
       },
+      // Large truck
       4: {
         weight: 40,
         min: 10,
         max: 50,
-        products: [5]
+        products: [6],
       },
     }
   }
 
   componentWillReceiveProps(nextProps) {
-    const productWeights = { 0: 1, 1: 1, 2: 1, 3: 2, 4: 3, 5: 4 }
+    const productWeights = {
+      0: 1, // original
+      1: 1, // schlämmbar
+      2: 1, // belastbar
+      3: 2, // farbig
+      5: 3, // schnellfest
+      6: 4, // hoch belastbar
+    }
     const productId = nextProps.product
 
     if (productId != null) {
@@ -141,7 +152,8 @@ export default class ProductFinder extends React.Component {
         depth = 30
         break
 
-      case 5:
+      // hoch belastbar
+      case 6:
         depth = this.product(product).depth.min
         break
 
