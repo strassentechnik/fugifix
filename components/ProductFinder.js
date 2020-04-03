@@ -1,9 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import { config } from 'config'
 import content from '../content.yaml'
-import Slider from 'react-rangeslider'
 import RangeSlider from './RangeSlider'
 import styles from './ProductFinder.module.scss'
 import classNames from 'classnames'
@@ -12,20 +9,17 @@ import numeral from 'numeral'
 const language = {
   delimiters: {
     thousands: '.',
-    decimal: ','
+    decimal: ',',
   },
   abbreviations: {
     thousand: 'k',
     million: 'm',
     billion: 'b',
-    trillion: 't'
-  },
-  ordinal: function (number) {
-    return '.'
+    trillion: 't',
   },
   currency: {
-    symbol: '€'
-  }
+    symbol: '€',
+  },
 }
 
 numeral.language('de', language)
@@ -34,7 +28,7 @@ numeral.language('de')
 
 export default class ProductFinder extends React.Component {
   static propTypes = {
-    product: React.PropTypes.number
+    product: React.PropTypes.number,
   }
 
   constructor(props) {
@@ -88,25 +82,20 @@ export default class ProductFinder extends React.Component {
 
       switch (productId) {
         case 0:
-          this.cat[1].products = [0]
+          this.category[1].products = [0]
           this.state.width = 1
           break
 
         case 1:
-          this.cat[1].products = [0,1,2]
-          this.state.width = this.cat[this.state.weight].min > 3 ? this.cat[this.state.weight].min : 3
-          this.state.depth = 30
-          break
-
         case 2:
-          this.cat[1].products = [0,1,2]
-          this.state.width = this.cat[this.state.weight].min > 3 ? this.cat[this.state.weight].min : 3
+          this.category[1].products = [0, 1, 2]
+          this.state.width = this.category[this.state.weight].min > 3 ? this.category[this.state.weight].min : 3
           this.state.depth = 30
           break
 
         default:
-          this.cat[1].products = [0,1,2]
-          this.state.width = this.cat[this.state.weight].min > 3 ? this.cat[this.state.weight].min : 3
+          this.category[1].products = [0, 1, 2]
+          this.state.width = this.category[this.state.weight].min > 3 ? this.category[this.state.weight].min : 3
           this.state.depth = content.products[productId].depth.min
           break
       }
@@ -117,26 +106,26 @@ export default class ProductFinder extends React.Component {
     this.setState({
       weight: weight,
       product: null,
-      width: (this.state.width < this.cat[weight].min ? this.cat[weight].min : this.state.width),
+      width: (this.state.width < this.category[weight].min ? this.category[weight].min : this.state.width),
     })
   }
 
   handleWidthChange = (width) => {
     if (this.state.weight === 1 && width < 4) {
-      this.cat[1].products = [0]
-      if (width === 3) this.cat[1].products.push(1, 2)
+      this.category[1].products = [0]
+      if (width === 3) this.category[1].products.push(1, 2)
     } else {
-      this.cat[1].products = [1,2]
+      this.category[1].products = [1, 2]
     }
 
     this.setState({
-      width: width
+      width: width,
     })
   }
 
   handleDepthChange = (depth) => {
     this.setState({
-      depth: depth
+      depth: depth,
     })
   }
 
@@ -163,7 +152,7 @@ export default class ProductFinder extends React.Component {
 
     this.setState({
       product: product,
-      depth: (this.state.depth < depth ? depth : this.state.depth)
+      depth: (this.state.depth < depth ? depth : this.state.depth),
     })
   }
 
@@ -171,8 +160,8 @@ export default class ProductFinder extends React.Component {
     this.setState({
       plaster: {
         width: parseInt(ev.currentTarget.value),
-        height: this.state.plaster.height
-      }
+        height: this.state.plaster.height,
+      },
     })
   }
 
@@ -180,8 +169,8 @@ export default class ProductFinder extends React.Component {
     this.setState({
       plaster: {
         width: this.state.plaster.width,
-        height: parseInt(ev.currentTarget.value)
-      }
+        height: parseInt(ev.currentTarget.value),
+      },
     })
   }
 
@@ -208,17 +197,21 @@ export default class ProductFinder extends React.Component {
     return result
   }
 
-  render () {
+  render() {
     return (
       <div className={styles.finder}>
         <div id="rechner" className={styles.finder__select}>
-          <p className="text-center">Finden Sie ein fugi-fix Produkt das zu Ihrem Projekt passt. Sie können entweder die Belastung und die Fugenbreite auswählen, oder oben auf dieser Seite bei Ihrem fugi-fix Produkt direkt den Verbrauch berechnen.</p>
+          <p className="text-center">Finden Sie ein fugi-fix Produkt das zu Ihrem Projekt passt. Sie
+            können entweder die Belastung und die Fugenbreite auswählen, oder oben auf dieser Seite
+            bei Ihrem fugi-fix Produkt direkt den Verbrauch berechnen.</p>
           <h2>Belastung</h2>
           <div className={styles.scale}>
-            <div className={styles.weight}><img src={prefixLink('/images/signet_human.svg')} /></div>
-            <div className={styles.weight}><img src={prefixLink('/images/signet_car.svg')} /></div>
-            <div className={styles.weight}><img src={prefixLink('/images/signet_truck_l.svg')} /></div>
-            <div className={styles.weight}><img src={prefixLink('/images/signet_truck_xl.svg')} /></div>
+            <div className={styles.weight}><img src={prefixLink('/images/signet_human.svg')}/></div>
+            <div className={styles.weight}><img src={prefixLink('/images/signet_car.svg')}/></div>
+            <div className={styles.weight}><img src={prefixLink('/images/signet_truck_l.svg')}/>
+            </div>
+            <div className={styles.weight}><img src={prefixLink('/images/signet_truck_xl.svg')}/>
+            </div>
           </div>
 
           <RangeSlider
@@ -226,20 +219,21 @@ export default class ProductFinder extends React.Component {
             max={4}
             step={1}
             value={this.state.weight}
-            valueDisplay={<span>{this.cat[this.state.weight].weight} <span className={styles.small}>t</span></span>}
+            valueDisplay={<span>{this.category[this.state.weight].weight} <span
+              className={styles.small}>t</span></span>}
             valueSuffix="t"
             orientation="horizontal"
-            onChange={this.handleWeightChange} />
+            onChange={this.handleWeightChange}/>
 
           <h2>Fugenbreite</h2>
           <RangeSlider
-            min={this.cat[this.state.weight].min}
-            max={this.cat[this.state.weight].max}
+            min={this.category[this.state.weight].min}
+            max={this.category[this.state.weight].max}
             step={1}
             value={this.state.width}
             valueDisplay={<span>{this.state.width} <span className={styles.small}>mm</span></span>}
             orientation="horizontal"
-            onChange={this.handleWidthChange} />
+            onChange={this.handleWidthChange}/>
         </div>
 
         <div className={styles.finder__products}>
@@ -254,9 +248,9 @@ export default class ProductFinder extends React.Component {
   }
 
   renderProducts() {
-    const products = this.cat[this.state.weight].products.map(i => {
+    const products = this.category[this.state.weight].products.map(i => {
       const classes = classNames(styles.finder__products__column, {
-        [`${styles['finder__products__column--active']}`]: this.state.product === i
+        [`${styles['finder__products__column--active']}`]: this.state.product === i,
       })
       return (
         <div key={i} className={classes} onClick={this.handleProductSelect.bind(this, i)}>
@@ -275,7 +269,8 @@ export default class ProductFinder extends React.Component {
     if (this.getResult() === 0) return
 
     const product = content.products[this.state.product]
-    const result = numeral(this.getResult()).format('0,0.0')
+    const result = numeral(this.getResult())
+    .format('0,0.0')
     const mailto = `mailto:info@fugi-fix.de?subject=Angebot für ${product.title}&body=Bitte schicken Sie mir ein Angebot über ${result} kg/m² für das Produkt ${product.title}. Vielen Dank!`
 
     return (
@@ -283,16 +278,19 @@ export default class ProductFinder extends React.Component {
         <div className={styles.finder__result}>
           <div className={styles.result}>{result} kg/m&sup2;</div>
           <p>Bedarfsmenge für 1 m&sup2; {product.title}</p>
-          <small>Bei den angegebenen Werten handelt es sich um Erfahrungswerte, diese sind jedoch unverbindlich und begründen kein vertragliches Rechtsverhältnis.</small>
+          <small>Bei den angegebenen Werten handelt es sich um Erfahrungswerte, diese sind jedoch
+            unverbindlich und begründen kein vertragliches Rechtsverhältnis.</small>
         </div>
 
         <div className={styles.finder__actions}>
           <div className="row">
             <div className="medium-6">
-              <a className="btn btn--block" href={mailto} target="_blank">Jetzt Angebot anfordern</a>
+              <a className="btn btn--block" href={mailto} target="_blank">Jetzt Angebot
+                anfordern</a>
             </div>
             <div className="medium-6">
-              <a className="btn btn--block" href={prefixLink(product.pdf)} target="_blank">Mehr Infos zum Produkt</a>
+              <a className="btn btn--block" href={prefixLink(product.pdf)} target="_blank">Mehr
+                Infos zum Produkt</a>
             </div>
           </div>
         </div>
@@ -305,9 +303,6 @@ export default class ProductFinder extends React.Component {
 
     const { depth } = this.product(this.state.product)
 
-    console.log(depth, this.state.depth)
-
-    // debugger
     return (
       <div className={styles.finder__select}>
         <h2>Fugentiefe</h2>
@@ -318,7 +313,7 @@ export default class ProductFinder extends React.Component {
           value={this.state.depth}
           valueDisplay={<span>{this.state.depth} <span className={styles.small}>mm</span></span>}
           orientation="horizontal"
-          onChange={this.handleDepthChange} />
+          onChange={this.handleDepthChange}/>
 
         {(this.state.depth < 30) ?
           <div className={styles.warning}>
@@ -331,8 +326,10 @@ export default class ProductFinder extends React.Component {
 
         <h2>Pflasterstein Größe (Länge x Breite in cm)</h2>
         <div className={styles.form}>
-          <input type="number" value={this.state.plaster.width} onChange={this.handlePlasterWidthChange} />
-          <input type="number" value={this.state.plaster.height} onChange={this.handlePlasterHeightChange} />
+          <input type="number" value={this.state.plaster.width}
+                 onChange={this.handlePlasterWidthChange}/>
+          <input type="number" value={this.state.plaster.height}
+                 onChange={this.handlePlasterHeightChange}/>
         </div>
       </div>
     )
