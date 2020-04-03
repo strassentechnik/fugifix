@@ -58,14 +58,22 @@ export default class Product extends React.Component {
     )
   }
 
-  renderInfo() {
+  renderInfo () {
     const { data } = this.props
 
     return (
       <div className={styles.actions}>
-        <a className="btn" href={prefixLink(data.pdf)} target="_blank" onClick={this.handleMoreInfo}>mehr Infos &rang;</a>
-        {data.id != 6 && data.id != 0 ? <button type="button" className="btn" onClick={this.handleCalculate}>Verbrauch berechnen &rang;</button> : null}
+        <a className="btn" href={prefixLink(data.pdf)} target="_blank"
+           onClick={this.handleMoreInfo}>mehr Infos &rang;</a>
+        {this.allowCalculation(data.id) ?
+          <button type="button" className="btn" onClick={this.handleCalculate}>Verbrauch
+            berechnen &rang;</button> : null}
       </div>
     )
+  }
+
+  allowCalculation(id) {
+    const blockedIds = [0, 6, 8];
+    return !blockedIds.includes(id);
   }
 }

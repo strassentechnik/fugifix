@@ -36,9 +36,11 @@
     &--schlaemmbar { @include product-color($color-schlaemmbar); }
     &--belastbar { @include product-color($color-belastbar); }
     &--farbig { @include product-color($color-farbig); }
+    &--sani { @include product-color($color-sani); }
     &--schnellfest { @include product-color($color-schnellfest); }
     &--hoch-belastbar { @include product-color($color-hoch-belastbar); }
     &--steindesign { @include product-color($color-steindesign); }
+    &--bitu { @include product-color($color-bitu); }
 
   }
 }

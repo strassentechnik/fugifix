@@ -25,7 +25,9 @@
   &--schlaemmbar { @include hexagon-color($color-schlaemmbar); }
   &--belastbar { @include hexagon-color($color-belastbar); }
   &--farbig { @include hexagon-color($color-farbig); }
+  &--sani { @include hexagon-color($color-sani); }
   &--schnellfest { @include hexagon-color($color-schnellfest); }
   &--hoch-belastbar { @include hexagon-color($color-hoch-belastbar); }
   &--steindesign { @include hexagon-color($color-steindesign); }
+  &--bitu { @include hexagon-color($color-bitu); }
 }

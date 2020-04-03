@@ -37,7 +37,7 @@ export default class Index extends React.Component {
 
     let keys = []
     for(let k in content.products) keys.push(k)
-    keys = keys.map(k => parseInt(k)).filter(k => k < 7)
+    keys = keys.map(k => parseInt(k)).filter(k => k < 8)
 
     setInterval(() => {
       if (!this.state.cycle) return
