@@ -305,9 +305,6 @@ export default class ProductFinder extends React.Component {
 
     const { depth } = this.product(this.state.product)
 
-    console.log(depth, this.state.depth)
-
-    // debugger
     return (
       <div className={styles.finder__select}>
         <h2>Fugentiefe</h2>

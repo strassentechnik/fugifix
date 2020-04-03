@@ -10,7 +10,7 @@ export default class Product extends React.Component {
     onStopCycle: React.PropTypes.func.isRequired,
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = { moreInfo: false }
   }
@@ -24,7 +24,7 @@ export default class Product extends React.Component {
     this.props.onCalculate(this.props.data.id)
   }
 
-  render () {
+  render() {
     const { data } = this.props
     const wrapperStyle = classNames(styles.productWrapper, styles[`product--${data.color}`])
 
@@ -56,7 +56,7 @@ export default class Product extends React.Component {
     )
   }
 
-  renderInfo () {
+  renderInfo() {
     const { data } = this.props
 
     return (
@@ -71,7 +71,7 @@ export default class Product extends React.Component {
   }
 
   allowCalculation(id) {
-    const blockedIds = [0, 7, 8];
-    return !blockedIds.includes(id);
+    const blockedIds = [0, 7, 8]
+    return !blockedIds.includes(id)
   }
 }

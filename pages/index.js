@@ -33,18 +33,12 @@ export default class Index extends React.Component {
   }
 
   componentDidMount() {
-    const delay = 2500
-
-    let keys = []
-    for(let k in content.products) keys.push(k)
-    keys = keys.map(k => parseInt(k)).filter(k => k < 8)
-
     setInterval(() => {
       if (!this.state.cycle) return
       let next = this.state.productId + 1
-      if (next > 6) next = 0
+      if (next > content.products.length - 1) next = 0
       this.setState({ productId: next })
-    }, delay)
+    }, 2500)
   }
 
   handleProductClick = (productId) => {
