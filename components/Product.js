@@ -71,7 +71,7 @@ export default class Product extends React.Component {
   }
 
   allowCalculation(id) {
-    const blockedIds = [0, 6, 8];
+    const blockedIds = [0, 7, 8];
     return !blockedIds.includes(id);
   }
 }

@@ -1,35 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import { config } from 'config'
 import styles from './CatalogueForm.module.scss'
-import classNames from 'classnames'
-import content from '../content.yaml'
 
 export default class CatalogueForm extends React.Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
-      _subject: 'Katalogbestellung'
+      _subject: 'Katalogbestellung',
     }
   }
 
   render () {
-    console.log(this.props)
+    console.log('QWE, props', this.props)
     return (
       <form action="//mailthis.to/fugifix" method="post" className={styles.form}>
         <div className="row">
           <div className="medium-6">
             <div>
               <label htmlFor="Firma">Firma *</label>
-              <input type="text" name="Firma" required={true} />
+              <input type="text" name="Firma" required={true}/>
             </div>
           </div>
           <div className="medium-6">
             <div>
               <label htmlFor="Name">Name *</label>
-              <input type="text" name="Name" required={true} />
+              <input type="text" name="Name" required={true}/>
             </div>
           </div>
         </div>
