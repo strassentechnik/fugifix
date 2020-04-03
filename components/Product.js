@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import { config } from 'config'
 import styles from './Product.module.scss'
 import classNames from 'classnames'
 
@@ -12,7 +10,7 @@ export default class Product extends React.Component {
     onStopCycle: React.PropTypes.func.isRequired,
   }
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = { moreInfo: false }
   }

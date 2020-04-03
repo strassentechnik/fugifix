@@ -64,7 +64,6 @@
 
     @include media($medium-up) {
       @include span-columns(5);
-      // @include shift(1);
 
       &:first-child { @include shift(1); }
     }
@@ -136,7 +135,6 @@
     span {
       display: none;
       position: absolute;
-      // width: 300px;
       text-align: right;
       right: 56px;
       margin-top: 1px;
@@ -162,7 +160,6 @@
   background-color: #575756;
   color: white;
   text-align: center;
-  // margin-bottom: $base-spacing;
 
   @include media($medium-up) {
     padding: $small-spacing 0;
@@ -207,10 +204,8 @@
 }
 
 .fugen {
-  // width: 150px;
   display: block;
   margin: 0 auto;
-  // float: right;
 }
 
 .section {
@@ -219,10 +214,6 @@
 
   &--alt {
     background-color: #e6e6e6;
-  }
-
-  &__contact {
-    // padding-bottom: $base-spacing;
   }
 
   .tool-grid {

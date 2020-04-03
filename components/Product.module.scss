@@ -10,9 +10,8 @@
 
 .productWrapper {
   position: relative;
-  // border-bottom: 5px solid $red;
   padding-top: 200px;
-  padding-bottom: $base-spacing * 2;
+  padding-bottom: $base-spacing * 4;
 
   &:before {
     position: absolute;
@@ -20,7 +19,6 @@
     left: -101px;
     content: " ";
     display: block;
-    // background-color: $red;
     width: 150px;
     height: 200px;
     transform: rotate(25deg);
@@ -48,11 +46,10 @@
 .product {
   @include outer-container;
   min-height: 350px;
-  // margin-top: 200px;
 }
 
 .signets {
-  padding-top: 0px;
+  padding-top: 0;
   @include span-columns(2);
 
   @include media($medium-up) {
@@ -62,7 +59,7 @@
 
 .content {
   position: relative;
-  padding-top: 0px;
+  padding-top: 0;
   min-height: 333px;
   @include span-columns(8);
 
