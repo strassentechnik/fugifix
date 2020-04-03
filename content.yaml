@@ -2,7 +2,7 @@
 general:
   what: |
     fugi-fix wurde 2007 von der Nadler Straßentechnik GmbH, einem führenden Anbieter für Straßen- und
-    Tiefbauprodukte ins Leben gerufen. Die hochwertigen Qualitäts-Pflasterfugenmörtel begeistern seit dem
+    Tiefbauprodukte, ins Leben gerufen. Die hochwertigen Qualitäts-Pflasterfugenmörtel begeistern seitdem
     immer mehr Verarbeiter und Händler.
   detail: |
     Einsatz findet fugi-fix Pflasterfugenmörtel bei begangenen und befahrenen Bereichen von leichter bis sehr
@@ -21,7 +21,7 @@ products:
   - id: 0
     title: fugi-fix "Original+"
     color: original
-    image: '/images/produkte/ff_original.png'
+    image: '/images/produkte/ff_original.jpg'
     pdf: '/kataloge/ff_original.pdf'
     density: 1.35
     eigenschaften:
@@ -44,7 +44,7 @@ products:
   - id: 1
     title: fugi-fix "schlämmbar"
     color: schlaemmbar
-    image: '/images/produkte/ff_schlaemmbar.png'
+    image: '/images/produkte/ff_schlaemmbar.jpg'
     pdf: '/kataloge/ff_schlaemmbar.pdf'
     density: 1.46
     eigenschaften:
@@ -69,7 +69,7 @@ products:
   - id: 2
     title: fugi-fix "belastbar"
     color: belastbar
-    image: '/images/produkte/ff_belastbar.png'
+    image: '/images/produkte/ff_belastbar.jpg'
     pdf: '/kataloge/ff_belastbar.pdf'
     density: 1.47
     eigenschaften:
@@ -94,7 +94,7 @@ products:
   - id: 3
     title: fugi-fix "farbig"
     color: farbig
-    image: '/images/produkte/ff_farbig.png'
+    image: '/images/produkte/ff_farbig.jpg'
     pdf: '/kataloge/ff_farbig.pdf'
     density: 1.47
     eigenschaften:
@@ -117,9 +117,34 @@ products:
         - Dauerhaft wasserdurchlässig
 
   - id: 4
+    title: fugi-fix "sani"
+    color: sani
+    image: '/images/produkte/ff_sani.jpg'
+    pdf: '/kataloge/ff_sani.pdf'
+    density: 1.65
+    eigenschaften:
+      - feucht
+      - frost
+      - unkraut
+    width:
+      min: 3
+      max: 50
+    depth:
+      min: 10
+      max: 120
+    content:
+      gain:
+        - Speziell für Altpflaster- und Rinnensanierung
+        - Nach 24 Stunden befahrbar
+        - Gute Fließfähigkeit
+        - Belastbar bis 25 t
+        - Dauerhafter Fugenschluss
+        - Ab 0° C Untergrundtemperatur verarbeitbar
+
+  - id: 5
     title: fugi-fix "schnellfest"
     color: schnellfest
-    image: '/images/produkte/ff_schnellfest.png'
+    image: '/images/produkte/ff_schnellfest.jpg'
     pdf: '/kataloge/ff_schnellfest.pdf'
     density: 1.67
     eigenschaften:
@@ -142,10 +167,10 @@ products:
         - Ab 0°C verarbeitbar
         - Dauerhaft wasserdurchlässig
 
-  - id: 5
+  - id: 6
     title: fugi-fix "hoch belastbar"
     color: hoch-belastbar
-    image: '/images/produkte/ff_hochbelastbar.png'
+    image: '/images/produkte/ff_hochbelastbar.jpg'
     pdf: '/kataloge/ff_hochbelastbar.pdf'
     density: 1.74
     eigenschaften:
@@ -166,13 +191,14 @@ products:
         - Ab 0°C verarbeitbar
         - Sehr gering wasserdurchlässig
 
-  - id: 6
+  - id: 7
     title: fugi-fix "steindesign"
     color: steindesign
-    image: '/images/produkte/ff_steindesign.png'
+    image: '/images/produkte/ff_steindesign.jpg'
     pdf: '/kataloge/ff_steindesign.pdf'
     density: 1.46
     eigenschaften:
+      - frost
       - feucht
       - unkraut
     width:
@@ -189,3 +215,28 @@ products:
         - UV- und wasserbeständig
         - Dauerhafter Fugenschluss
         - Stark wasserdurchlässig
+
+  - id: 8
+    title: fugi-fix "bitu"
+    color: bitu
+    image: '/images/produkte/ff_bitu.jpg'
+    pdf: '/kataloge/ff_bitu.pdf'
+    density: 1.2
+    eigenschaften:
+      - frost
+      - unkraut
+    width:
+      min: 1
+      max: 50
+    depth:
+      min: 40
+      max: 120
+    content:
+      gain:
+        - Kalt verarbeitbar
+        - Gute Dauerelastizität und -plastizität
+        - Ausgezeichnete Wärme-, Kälte-, Alterungs- und Witterungsbeständigkeit
+        - Sehr gute Flankenhaftung
+        - Schnelle Verkehrsfreigabe
+        - Umweltfreundlich (lösemittelfrei)
+        - Hervorragende Klebekraft auf verschiedenen Untergründen

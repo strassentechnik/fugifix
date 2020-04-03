@@ -1,18 +1,6 @@
 @import "~normalize.css";
 @import "~bourbon/app/assets/stylesheets/bourbon";
-
-// @import "~blaze/scss/blaze";
-// @import "settings";
-
-// @import "vendor/normalize";
-// @import "vendor/animate";
-// @import "vendor/hamburgers";
-
 @import "base/base";
-
-// @import "components/index";
-
-// @import "shame";
 
 html, body {
   height: 100%;
@@ -26,19 +14,6 @@ body {
 @include base-typography;
 @include base-buttons;
 @include base-forms;
-// @include base-tables;
-
-// @include base-theme(water, $base-typography-water);
-// @include base-theme(stone, $base-typography-stone);
-
-
-// @include component-all;
-
-// @import "mountain_view";
-
-// @include shame-on-me;
-
-// @import "font-awesome";
 
 .page {
   @include outer-container;
@@ -72,37 +47,68 @@ body {
 }
 
 .bg {
-  &--original { background-color: $color-original }
-  &--schlaemmbar { background-color: $color-schlaemmbar }
-  &--belastbar { background-color: $color-belastbar }
-  &--farbig { background-color: $color-farbig }
-  &--schnellfest { background-color: $color-schnellfest }
-  &--hoch-belastbar { background-color: $color-hoch-belastbar }
-  &--steindesign { background-color: $color-steindesign }
+  &--original {
+    background-color: $color-original
+  }
+
+  &--schlaemmbar {
+    background-color: $color-schlaemmbar
+  }
+
+  &--belastbar {
+    background-color: $color-belastbar
+  }
+
+  &--farbig {
+    background-color: $color-farbig
+  }
+
+  &--sani {
+    background-color: $color-sani
+  }
+
+  &--schnellfest {
+    background-color: $color-schnellfest
+  }
+
+  &--hoch-belastbar {
+    background-color: $color-hoch-belastbar
+  }
+
+  &--steindesign {
+    background-color: $color-steindesign
+  }
+
+  &--bitu {
+    background-color: $color-bitu
+  }
 }
 
 .rangeslider {
   margin: 20px 0;
   position: relative;
   background: #e6e6e6;
+
   .rangeslider__fill, .rangeslider__handle {
     position: absolute;
   }
+
   &, .rangeslider__fill {
     display: block;
     box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
   }
+
   .rangeslider__handle {
-    // background: #fff;
     background: $red;
-    // border: 1px solid darken(#575756, 10);
     cursor: pointer;
     display: inline-block;
     position: absolute;
+
     &:active, &:hover {
       background: $red;
     }
   }
+
   .rangeslider__value {
     position: absolute;
     top: 30px;
@@ -110,8 +116,7 @@ body {
     text-align: center;
     left: -26px;
     background-color: transparent;
-    // border: 1px solid #575756;
-    padding: 0px 0px;
+    padding: 0 0;
     color: #575756;
     font-size: 1.5rem;
   }
@@ -131,6 +136,7 @@ body {
     border-radius: 10px;
     top: 0;
   }
+
   .rangeslider__handle {
     width: 26px;
     height: 26px;
@@ -147,16 +153,19 @@ body {
   height: 150px;
   max-width: 10px;
   background: none;
+
   .rangeslider__fill {
     width: 100%;
     background: #575756;
     box-shadow: none;
     bottom: 0;
   }
+
   .rangeslider__handle {
     width: 30px;
     height: 10px;
     left: -10px;
+
     &:active {
       box-shadow: none;
     }

@@ -1,73 +1,68 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import DocumentTitle from 'react-document-title'
-import Product from '../components/Product'
-import Hexagon from '../components/Hexagon'
-import ProductFinder from '../components/ProductFinder'
-import CatalogueForm from '../components/CatalogueForm'
-import { config } from 'config'
-import content from '../content.yaml'
-import styles from './index.module.scss'
-import MediaQuery from 'react-responsive'
-import Scroll from 'react-scroll'
-import classNames from 'classnames'
+import React from 'react';
+import { prefixLink } from 'gatsby-helpers';
+import DocumentTitle from 'react-document-title';
+import Product from '../components/Product';
+import Hexagon from '../components/Hexagon';
+import ProductFinder from '../components/ProductFinder';
+import CatalogueForm from '../components/CatalogueForm';
+import { config } from 'config';
+import content from '../content.yaml';
+import styles from './index.module.scss';
+import MediaQuery from 'react-responsive';
+import Scroll from 'react-scroll';
+import classNames from 'classnames';
 
-const scroll = Scroll.animateScroll
+const scroll = Scroll.animateScroll;
 
-Array.prototype.recurse = function(callback, delay) {
-   delay = delay || 200;
-   var self = this, idx = 0;
+Array.prototype.recurse = function (callback, delay) {
+  delay = delay || 200;
+  var self = this,
+    idx = 0;
 
-   setInterval(function() {
-      callback(self[idx], idx);
-      idx = (idx+1 < self.length) ? idx+1 : 0;
-   }, delay);
-}
+  setInterval(function () {
+    callback(self[idx], idx);
+    idx = (idx + 1 < self.length) ? idx + 1 : 0;
+  }, delay);
+};
 
 export default class Index extends React.Component {
 
   constructor(props) {
-    super(props)
-    this.state = { productId: 0, value: 10, prodForCalc: null, cycle: true }
+    super(props);
+    this.state = { productId: 0, value: 10, prodForCalc: null, cycle: true };
   }
 
   componentDidMount() {
-    const delay = 2500
-
-    let keys = []
-    for(let k in content.products) keys.push(k)
-    keys = keys.map(k => parseInt(k)).filter(k => k < 7)
-
     setInterval(() => {
-      if (!this.state.cycle) return
-      let next = this.state.productId + 1
-      if (next > 6) next = 0
-      this.setState({ productId: next })
-    }, delay)
+      if (!this.state.cycle) return;
+      let next = this.state.productId + 1;
+      if (next > content.products.length - 1) next = 0;
+      this.setState({ productId: next });
+    }, 2500);
   }
 
   handleProductClick = (productId) => {
-    this.setState({ productId: productId, cycle: false })
-  }
+    this.setState({ productId: productId, cycle: false });
+  };
 
   handleStopCycle = () => {
-    this.setState({ cycle: false })
-  }
+    this.setState({ cycle: false });
+  };
 
   handleCalculate = (productId) => {
-    const el = document.getElementById('rechner')
-    this.setState({ prodForCalc: productId })
-    scroll.scrollTo(el.offsetTop)
-  }
+    const el = document.getElementById('rechner');
+    this.setState({ prodForCalc: productId });
+    scroll.scrollTo(el.offsetTop);
+  };
 
-  render () {
-    const product = content.products[this.state.productId]
+  render() {
+    const product = content.products[this.state.productId];
 
     return (
       <DocumentTitle title={config.siteTitle}>
         <div>
-          <Product data={product} onStopCycle={this.handleStopCycle} onCalculate={this.handleCalculate} />
+          <Product data={product} onStopCycle={this.handleStopCycle}
+                   onCalculate={this.handleCalculate}/>
 
           <nav className={styles.productNav}>
             {this.renderNavItems()}
@@ -91,14 +86,14 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className={styles.image}>
-                <img src={prefixLink('/images/shapebild01.png')} />
+                <img src={prefixLink('/images/shapebild01.png')}/>
               </div>
             </div>
 
             <div className={styles.grid}>
 
               <div className={styles.image}>
-                <img src={prefixLink('/images/shapebild02.png')} />
+                <img src={prefixLink('/images/shapebild02.png')}/>
               </div>
               <div className={styles.text}>
                 <div className={styles.inner}>
@@ -120,7 +115,7 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className={styles.image}>
-                <img src={prefixLink('/images/shapebild03.png')} />
+                <img src={prefixLink('/images/shapebild03.png')}/>
               </div>
             </div>
           </div>
@@ -129,7 +124,7 @@ export default class Index extends React.Component {
             Welches fugi-fix brauche ich?
           </h2>
 
-          <ProductFinder product={this.state.prodForCalc} />
+          <ProductFinder product={this.state.prodForCalc}/>
 
           <div className={classNames(styles.section, styles['section--alt'])} id="katalog">
             <h2 className={styles.subtitle}>
@@ -138,7 +133,7 @@ export default class Index extends React.Component {
 
             <div className="row">
               <div className="small-8 small-shift-2">
-                <CatalogueForm product={this.state.prodForCalc} />
+                <CatalogueForm product={this.state.prodForCalc}/>
               </div>
             </div>
           </div>
@@ -149,36 +144,40 @@ export default class Index extends React.Component {
             </h2>
 
             <p className="text-center">
-              Wir bieten Ihnen verschiedene Werkzeuge zur sauberen Verlegung des Pflasterfugenmörtels.<br />
-              Sollten Sie diese Dinge nicht bereits zu Hause haben, können Sie diese bei einer Mörtelbestellung gleich mitbestellen.
+              Wir bieten Ihnen verschiedene Werkzeuge zur sauberen Verlegung des
+              Pflasterfugenmörtels.<br/>
+              Sollten Sie diese Dinge nicht bereits zu Hause haben, können Sie diese bei einer
+              Mörtelbestellung gleich mitbestellen.
             </p>
 
             <br/>
 
             <div className={styles['tool-grid']}>
               <div className={styles.tool}>
-                <img src={prefixLink('/images/besen01.png')} />
+                <img src={prefixLink('/images/besen01.png')}/>
                 <span>Straßenbesen</span>
                 <span>Vorreinigung der Fläche</span>
               </div>
               <div className={styles.tool}>
-                <img src={prefixLink('/images/besen02.png')} />
+                <img src={prefixLink('/images/besen02.png')}/>
                 <span>Feiner Haarbesen</span>
                 <span>Endreinigung der Fläche</span>
               </div>
               <div className={styles.tool}>
-                <img src={prefixLink('/images/wischer.png')} />
+                <img src={prefixLink('/images/wischer.png')}/>
                 <span>Fliesenwischer</span>
                 <span>Einarbeitung des Materials</span>
               </div>
               <div className={styles.tool}>
-                <img src={prefixLink('/images/Messbecher.png')} />
+                <img src={prefixLink('/images/Messbecher.png')}/>
                 <span>Messbecher</span>
                 <span>Für die Wasserzugabe für 2K Mörtel</span>
               </div>
             </div>
           </div>
-          <div className={classNames(styles.section, styles.section__contact, styles['section--alt'])} id="kontakt">
+          <div
+            className={classNames(styles.section, styles.section__contact, styles['section--alt'])}
+            id="kontakt">
             <h2 className={styles.subtitle}>
               Kontakt
             </h2>
@@ -202,7 +201,7 @@ export default class Index extends React.Component {
           </div>
         </div>
       </DocumentTitle>
-    )
+    );
   }
 
   renderNavItems() {
@@ -211,14 +210,15 @@ export default class Index extends React.Component {
         <a key={i} onClick={this.handleProductClick.bind(this, i)}>
           <MediaQuery query='(min-width: 48em)'>
             <span className={`bg--${p.color}`}>{p.title}</span>
-            <Hexagon color={p.color} active={i === this.state.productId} />
+            <Hexagon color={p.color} active={i === this.state.productId}/>
           </MediaQuery>
           <MediaQuery query='(max-width: 767px)'>
             <span className={`bg--${p.color}`}>{p.title}</span>
-            <Hexagon width={30} strokeWidth={2} color={p.color} active={i === this.state.productId} />
+            <Hexagon width={30} strokeWidth={2} color={p.color}
+                     active={i === this.state.productId}/>
           </MediaQuery>
         </a>
-      )
-    })
+      );
+    });
   }
 }
