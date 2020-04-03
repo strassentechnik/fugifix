@@ -7,7 +7,6 @@
           width: flex-grid($i, $grid-columns, 0);
         }
         margin-right: inherit;
-        // padding: 0 ($gutter / 2);
       } @else {
         @include span-columns($i);
       }
