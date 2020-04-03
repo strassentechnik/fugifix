@@ -1,14 +1,15 @@
-import React, { PropTypes, Component } from 'react';
-import styles from './RangeSlider.scss'
+import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
 
 function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.substr(1);
+  return str.charAt(0)
+  .toUpperCase() + str.substr(1);
 }
 
 function maxmin(pos, min, max) {
-  if (pos < min) { return min; }
-  if (pos > max) { return max; }
+  if (pos < min) return min;
+  if (pos > max) return max;
+
   return pos;
 }
 
@@ -37,7 +38,7 @@ class RangeSlider extends Component {
     orientation: PropTypes.string,
     onChange: PropTypes.func,
     className: PropTypes.string,
-  }
+  };
 
   static defaultProps = {
     min: 0,
@@ -45,12 +46,12 @@ class RangeSlider extends Component {
     step: 1,
     value: 0,
     orientation: 'horizontal',
-  }
+  };
 
   state = {
     limit: 0,
     grab: 0,
-  }
+  };
 
   // Add window resize event listener here
   componentDidMount() {
@@ -72,12 +73,12 @@ class RangeSlider extends Component {
       limit: sliderPos - handlePos,
       grab: handlePos / 2,
     });
-  }
+  };
 
   handleStart = () => {
     document.addEventListener('mousemove', this.handleDrag);
     document.addEventListener('mouseup', this.handleEnd);
-  }
+  };
 
   handleDrag = (e) => {
     this.handleNoop(e);
@@ -86,17 +87,17 @@ class RangeSlider extends Component {
 
     const value = this.position(e);
     onChange && onChange(value);
-  }
+  };
 
   handleEnd = () => {
     document.removeEventListener('mousemove', this.handleDrag);
     document.removeEventListener('mouseup', this.handleEnd);
-  }
+  };
 
   handleNoop = (e) => {
     e.stopPropagation();
     e.preventDefault();
-  }
+  };
 
   getPositionFromValue = (value) => {
     const { limit } = this.state;
@@ -104,10 +105,9 @@ class RangeSlider extends Component {
     const diffMaxMin = max - min;
     const diffValMin = value - min;
     const percentage = diffValMin / diffMaxMin;
-    const pos = Math.round(percentage * limit);
 
-    return pos;
-  }
+    return Math.round(percentage * limit);
+  };
 
   getValueFromPosition = (pos) => {
     let value = null;
@@ -128,7 +128,7 @@ class RangeSlider extends Component {
     if (value <= min) value = min;
 
     return value;
-  }
+  };
 
   position = (e) => {
     const { grab } = this.state;
@@ -141,12 +141,10 @@ class RangeSlider extends Component {
       ? e[clientCoordinateStyle]
       : e.touches[0][clientCoordinateStyle];
     const direction = node.getBoundingClientRect()[directionStyle];
-
     const pos = coordinate - direction - grab;
-    const value = this.getValueFromPosition(pos);
 
-    return value;
-  }
+    return this.getValueFromPosition(pos);
+  };
 
   coordinates = (pos) => {
     let fillPos = null;
@@ -168,7 +166,7 @@ class RangeSlider extends Component {
       fill: fillPos,
       handle: handlePos,
     };
-  }
+  };
 
   render() {
     const { value, orientation, className } = this.props;
@@ -181,7 +179,9 @@ class RangeSlider extends Component {
 
     return (
       <div
-        ref={(s) => { this.slider = s; }}
+        ref={(s) => {
+          this.slider = s;
+        }}
         className={cx('rangeslider ', `rangeslider-${orientation}`, className)}
         onMouseDown={this.handleDrag}
         onTouchEnd={this.handleNoop}
@@ -191,7 +191,9 @@ class RangeSlider extends Component {
           style={fillStyle}
         />
         <div
-          ref={(sh) => { this.handle = sh; }}
+          ref={(sh) => {
+            this.handle = sh;
+          }}
           className="rangeslider__handle"
           onMouseDown={this.handleStart}
           onTouchEnd={this.handleNoop}

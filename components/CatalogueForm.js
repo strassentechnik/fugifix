@@ -1,16 +1,16 @@
-import React from 'react'
-import styles from './CatalogueForm.module.scss'
+import React from 'react';
+import styles from './CatalogueForm.module.scss';
 
 export default class CatalogueForm extends React.Component {
 
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       _subject: 'Katalogbestellung',
-    }
+    };
   }
 
-  render () {
+  render() {
     return (
       <form action="//mailthis.to/fugifix" method="post" className={styles.form}>
         <div className="row">
@@ -97,6 +97,6 @@ export default class CatalogueForm extends React.Component {
         </div>
         <div className="text-center">Felder mit einem * müssen ausgefüllt werden.</div>
       </form>
-    )
+    );
   }
 }
