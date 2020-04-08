@@ -48,39 +48,48 @@ body {
 
 .bg {
   &--original {
-    background-color: $color-original
+    background-color: $color-original;
+    color: $color-hover-light;
   }
 
   &--schlaemmbar {
-    background-color: $color-schlaemmbar
+    background-color: $color-schlaemmbar;
+    color: $color-hover-light;
   }
 
   &--belastbar {
-    background-color: $color-belastbar
+    background-color: $color-belastbar;
+    color: $color-hover-light;
   }
 
   &--farbig {
-    background-color: $color-farbig
+    background-color: $color-farbig;
+    color: $color-hover-light;
   }
 
   &--sani {
-    background-color: $color-sani
+    background-color: $color-sani;
+    color: $color-hover-dark;
   }
 
   &--schnellfest {
-    background-color: $color-schnellfest
+    background-color: $color-schnellfest;
+    color: $color-hover-light;
   }
 
   &--hoch-belastbar {
-    background-color: $color-hoch-belastbar
+    background-color: $color-hoch-belastbar;
+    color: $color-hover-light;
   }
 
   &--steindesign {
-    background-color: $color-steindesign
+    background-color: $color-steindesign;
+    color: $color-hover-light;
   }
 
   &--bitu {
-    background-color: $color-bitu
+    background-color: $color-bitu;
+    color: $color-hover-light;
   }
 }
 
@@ -95,7 +104,7 @@ body {
 
   &, .rangeslider__fill {
     display: block;
-    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 
   .rangeslider__handle {
