@@ -139,14 +139,12 @@
       right: 56px;
       margin-top: 1px;
       padding: 8px 14px;
-      color: white;
       white-space: nowrap;
       opacity: 0.8;
     }
 
     &:hover {
       span {
-
 
         @include media($medium-up) {
           display: block;
