@@ -5,6 +5,7 @@ import Product from '../components/Product';
 import Hexagon from '../components/Hexagon';
 import ProductFinder from '../components/ProductFinder';
 import CatalogueForm from '../components/CatalogueForm';
+import CookieBanner from '../components/CookieBanner';
 import { config } from 'config';
 import content from '../content.yaml';
 import styles from './index.module.scss';
@@ -61,6 +62,7 @@ export default class Index extends React.Component {
     return (
       <DocumentTitle title={config.siteTitle}>
         <div>
+          <CookieBanner></CookieBanner>
           <Product data={product} onStopCycle={this.handleStopCycle}
                    onCalculate={this.handleCalculate}/>
 
