@@ -1,4 +1,12 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Getting started
 
-Install this starter (assuming Gatsby is installed) by running from your CLI: gatsby new gatsby-example-site
+## Install everything
+* `yarn install`
+* Make sure you have Node 6.x installed (yeah, we definitely need to bump this...)
+
+## Develop
+* `yarn run develop`
+
+## Deploy
+* `yarn run deploy`
+* Fix CNAME on GitHub and set it to `fugi-fix.de` after every successful deployment
