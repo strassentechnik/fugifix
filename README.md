@@ -16,4 +16,5 @@ nvm install 6
 
 ## Deploy
 * `yarn run deploy`
-* Fix CNAME on GitHub and set it to `fugi-fix.de` after every successful deployment
+This **should** also automatically set the github-pages CNAME entry to "fugi-fix.de".
+If you run into an issue with this very entry, check the `deploy` script/action or the CNAME entry on Github.
