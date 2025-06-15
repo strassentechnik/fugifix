@@ -78,7 +78,7 @@ export default class ProductFinder extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     const productWeights = {
-      0: 1, // original
+      // ProductId -> Weight
       1: 1, // schlämmbar
       2: 1, // belastbar
       3: 2, // farbig

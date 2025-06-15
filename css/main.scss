@@ -47,11 +47,6 @@ body {
 }
 
 .bg {
-  &--original {
-    background-color: $color-original;
-    color: $color-hover-light;
-  }
-
   &--schlaemmbar {
     background-color: $color-schlaemmbar;
     color: $color-hover-light;
@@ -79,11 +74,6 @@ body {
 
   &--hoch-belastbar {
     background-color: $color-hoch-belastbar;
-    color: $color-hover-light;
-  }
-
-  &--steindesign {
-    background-color: $color-steindesign;
     color: $color-hover-light;
   }
 
