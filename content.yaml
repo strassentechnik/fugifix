@@ -18,29 +18,6 @@ general:
     - Bis 40 t Belastung
 
 products:
-  - id: 0
-    title: fugi-fix "Original+"
-    color: original
-    image: '/images/produkte/ff_original.jpg'
-    pdf: '/kataloge/ff_original.pdf'
-    density: 1.35
-    eigenschaften:
-      - feucht
-      - unkraut
-    width:
-      min: 1
-      max: 50
-    depth:
-      min: 30
-      max: 120
-    content:
-      gain:
-        - Geeignet für ungebundene Bauweise
-        - Einfache Verarbeitung
-        - Kein Unkraut mehr in den Fugen
-        - Ab +7°C verarbeitbar
-        - Wasserdurchlässig
-
   - id: 1
     title: fugi-fix "schlämmbar"
     color: schlaemmbar
@@ -192,31 +169,6 @@ products:
         - Sehr gering wasserdurchlässig
 
   - id: 7
-    title: fugi-fix "steindesign"
-    color: steindesign
-    image: '/images/produkte/ff_steindesign.jpg'
-    pdf: '/kataloge/ff_steindesign.pdf'
-    density: 1.46
-    eigenschaften:
-      - frost
-      - feucht
-      - unkraut
-    width:
-      min: 1
-      max: 50
-    depth:
-      min: 10
-      max: 120
-    content:
-      gain:
-        - Für Flächen ab 30 mm Tiefe
-        - Nach 24 Stunden begehbar
-        - Farbecht
-        - UV- und wasserbeständig
-        - Dauerhafter Fugenschluss
-        - Stark wasserdurchlässig
-
-  - id: 8
     title: fugi-fix "bitu"
     color: bitu
     image: '/images/produkte/ff_bitu.jpg'
